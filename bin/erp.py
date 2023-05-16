@@ -120,11 +120,15 @@ class feedback():
         el1.send_keys(str(num))
         el1.send_keys(Keys.ENTER)
 if __name__ == "__main__":
-    print("\x1b[6;30;42m The very First time you run this application or  \n when you run this application after a while, you have to log in with your loginId and password.\n After Successfuly loggin in, you have to restart the application.   😊 \x1b[0m")
-    inp = input("type Y to continue ")
+    print("\x1b[6;30;42m Have You Run this program before and Logged in with your credentials ? \x1b[0m")
+    inp = input("type Y or N to confirm Yes or No : ")
     if(inp == "Y" or inp == "y"):
         ob = feedback()
         sleep(5);
         ob.findSection()
-        
+    elif (inp == 'n' or inp == 'n') :
+        print("\x1b[6;30;42m Please log in with your credentials. After logging in, manually close the browser, and then run this program again to continue. \x1b[0m")
+        sleep(4);
+        ob = feedback()
+        sleep(120);
    
