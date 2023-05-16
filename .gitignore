@@ -1,3 +1,4 @@
-*
-!.gitignore
-!erp.py
+.gitignore
+user-data/*
+!user-data/.gitkeep
+.venv
