@@ -34,7 +34,7 @@ class feedback():
             cwd = os.getcwd()
             os.chdir(cwd)
             cwd = os.getcwd()
-            cwd = "--user-data-dir="+cwd
+            cwd = "--user-data-dir="+os.path.join(cwd,"user-data")
             options.add_argument(cwd)
             options.add_argument('--log-level=3')
             options.add_argument("--start-maximized")
@@ -44,7 +44,7 @@ class feedback():
             cwd = os.getcwd()
             os.chdir(cwd)
             cwd = os.getcwd()
-            cwd = "--user-data-dir="+cwd
+            cwd = "--user-data-dir="+os.path.join(cwd,"user-data")
             options.add_argument(cwd)
             options.add_argument('--log-level=3')
             options.add_argument("--start-maximized")
