@@ -96,11 +96,7 @@ class feedback():
                 break
     def fillfeedback(self,tr):
         base_path = ".//td["
-        i = None
-        if self.last : 
-            i = 1 
-        else : 
-            i = 3
+        i =1
         while True : 
             path = base_path+str(i)+"]/div[1]/a[1]"
             try :
@@ -111,6 +107,9 @@ class feedback():
                 i+=1
                 sleep(0.5)
             except (NoSuchElementException,ElementClickInterceptedException)  as e:
+                if i < 3: 
+                    i+=1
+                    continue
                 break
     def fillDropDown(self,el):
         path = ".//div[1]/input[1]"
